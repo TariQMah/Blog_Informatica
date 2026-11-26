@@ -1,6 +1,6 @@
 import { FileQuestion } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui";
+import { buttonVariants } from "@/components/ui";
 
 export default function NotFound() {
   return (
@@ -14,9 +14,9 @@ export default function NotFound() {
       <p className="mb-6 max-w-md text-muted-foreground">
         La página que buscás no existe o fue movida.
       </p>
-      <Link href="/">
-        <Button variant="default">Ir al inicio</Button>
-      </Link>
+<Link href="/" className={buttonVariants({ variant: "default" })}>
+  Ir al inicio
+</Link>
     </div>
   );
 }
