@@ -264,8 +264,9 @@ const materiasIndex: Map<string, Set<string>> = (() => {
   const map = new Map<string, Set<string>>();
   for (const c of carreras) {
     for (const row of c.plan) {
-      if (!map.has(row.nombre)) map.set(row.nombre, new Set());
-      map.get(row.nombre)!.add(c.slug);
+const set = map.get(row.nombre) ?? new Set<string>();
+      map.set(row.nombre, set);
+      set.add(c.slug);
     }
   }
   return map;
