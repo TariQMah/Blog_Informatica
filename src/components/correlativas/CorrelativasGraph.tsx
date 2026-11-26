@@ -651,7 +651,7 @@ function MateriaNode({ data }: NodeProps<Node<MateriaNodeData>>) {
     esExternal && "Click para ver el listado oficial de optativas",
   ]
     .filter(Boolean)
-    .join(" — ");
+  .join(" - ");
 
   return (
     <div
