@@ -3,7 +3,7 @@
 import { AlertTriangle } from "lucide-react";
 import Link from "next/link";
 import { useEffect } from "react";
-import { Button } from "@/components/ui";
+import { Button, buttonVariants } from "@/components/ui";
 
 const isDevelopment = () => process.env.NODE_ENV !== "production";
 
@@ -31,9 +31,9 @@ export default function AppError({
         <Button onClick={reset} variant="default">
           Reintentar
         </Button>
-        <Link href="/">
-          <Button variant="outline">Ir al inicio</Button>
-        </Link>
+<Link href="/" className={buttonVariants({ variant: "outline" })}>
+  Ir al inicio
+</Link>
       </div>
       {appError.digest && (
         <p className="mt-4 text-xs text-muted-foreground">
